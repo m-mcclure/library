@@ -1,5 +1,5 @@
 //
-//  LibraryTableViewController.swift
+//  BooksInSectionTableViewController.swift
 //  Library
 //
 //  Created by Matthew McClure on 6/18/15.
@@ -8,39 +8,20 @@
 
 import UIKit
 
-class LibraryTableViewController: UITableViewController, UITableViewDataSource {
+class BooksInSectionTableViewController: UITableViewController, UITableViewDataSource {
   
-  var sectionsArray = [Section]()
+  var booksInLitSection = [Book]()
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    //create add sections to sections array
-    let literature = Section(section: "Literature")
-    self.sectionsArray.append(literature)
+    let twoCities = Book(title: "A Tale of Two Cities", author: "Dickens, Charles", numberOfPages: 588, isbn10Code: 3918047122)
+    booksInLitSection.append(twoCities)
+    let beowulf = Book(title: "Beowulf", author: "Anonymous", numberOfPages: 844, isbn10Code: 0021827773)
+    booksInLitSection.append(beowulf)
     
-    let art = Section(section: "Art")
-    self.sectionsArray.append(art)
-    
-    let music = Section(section: "Music")
-    self.sectionsArray.append(music)
-    
-    let science = Section(section: "Science")
-    self.sectionsArray.append(science)
-    
-    let technology = Section(section: "Technology")
-    self.sectionsArray.append(technology)
-    
-    let history = Section(section: "History")
-    self.sectionsArray.append(history)
-    
-    let philosophy = Section(section: "Philosophy")
-    self.sectionsArray.append(philosophy)
-    
-    let reference = Section(section: "Reference")
-    self.sectionsArray.append(reference)
-    
-    
+  
+
   }
   
   // MARK: - Table view data source
@@ -54,19 +35,20 @@ class LibraryTableViewController: UITableViewController, UITableViewDataSource {
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     // #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return sectionsArray.count
+    return 4
   }
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier("sectionCell") as! UITableViewCell
-    
-    // Configure the cell...
-    let sectionToDisplay = self.sectionsArray[indexPath.row]
-    cell.textLabel!.text = sectionToDisplay.sectionName
-    
-    return cell
-  }
+  let cell = tableView.dequeueReusableCellWithIdentifier("Book", forIndexPath: indexPath) as! UITableViewCell
   
+  // Configure the cell...
+//    
+//    let bookToDisplay = booksInLitSection[indexPath.row]
+    cell.textLabel!.text = "umm"
+    
+  return cell
+  }
+
   
   /*
   // Override to support conditional editing of the table view.

@@ -9,6 +9,7 @@
             <objects>
                 <tableViewController id="fny-gr-elx" customClass="LibraryTableViewController" customModule="Library" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="9EB-YP-OAZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -17,6 +18,9 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gkj-QA-hPd" id="bSm-CN-sBf">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="aoC-w8-kRs" kind="show" identifier="showBooksInSection" id="wms-R4-MME"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
@@ -28,6 +32,29 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C3s-tG-Qut" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1302" y="-375.75"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="Q4l-Wh-k0O">
+            <objects>
+                <tableViewController id="pvg-9V-8uX" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Kge-wv-lvh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Book" id="Wlc-53-Fgx">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wlc-53-Fgx" id="v67-2U-ilr">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="iaJ-6a-Bfx"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Bi-uu-2GB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2938" y="-372.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="U8o-fI-Vsf">
@@ -46,6 +73,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hmQ-PG-Rhp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="490" y="-375.75"/>
+        </scene>
+        <!--Books-->
+        <scene sceneID="HyF-nf-rS1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aoC-w8-kRs" customClass="Books" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FNM-Yu-Ngr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pvg-9V-8uX" kind="relationship" relationship="rootViewController" id="rHo-dl-thv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mMx-bT-O2G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2126" y="-372.75"/>
         </scene>
     </scenes>
 </document>

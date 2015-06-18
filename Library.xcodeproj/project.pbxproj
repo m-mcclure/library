@@ -15,6 +15,7 @@
 		34C810F61B336E4C006D3B97 /* LibraryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C810F51B336E4C006D3B97 /* LibraryTableViewController.swift */; };
 		34C810F91B336ECE006D3B97 /* Sections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C810F81B336ECE006D3B97 /* Sections.swift */; };
 		34C810FD1B3370DD006D3B97 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C810FC1B3370DD006D3B97 /* Book.swift */; };
+		34C811011B338163006D3B97 /* BooksInSectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C811001B338163006D3B97 /* BooksInSectionTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		34C810F51B336E4C006D3B97 /* LibraryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryTableViewController.swift; sourceTree = "<group>"; };
 		34C810F81B336ECE006D3B97 /* Sections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sections.swift; sourceTree = "<group>"; };
 		34C810FC1B3370DD006D3B97 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		34C811001B338163006D3B97 /* BooksInSectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksInSectionTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				34C810F51B336E4C006D3B97 /* LibraryTableViewController.swift */,
+				34C811001B338163006D3B97 /* BooksInSectionTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34C811011B338163006D3B97 /* BooksInSectionTableViewController.swift in Sources */,
 				34C810FD1B3370DD006D3B97 /* Book.swift in Sources */,
 				34C810F61B336E4C006D3B97 /* LibraryTableViewController.swift in Sources */,
 				34C810F91B336ECE006D3B97 /* Sections.swift in Sources */,

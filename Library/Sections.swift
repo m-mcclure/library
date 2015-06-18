@@ -10,7 +10,7 @@ import Foundation
 
 class Section {
   var sectionName : String
-  var booksInSection = []
+  var booksInSection = [Book]()
   
   init (section: String) {
     self.sectionName = section 
