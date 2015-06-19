@@ -39,8 +39,6 @@ class LibraryTableViewController: UITableViewController, UITableViewDataSource {
     
     let reference = Section(section: "Reference")
     self.sectionsArray.append(reference)
-    
-    
   }
   
   // MARK: - Table view data source
@@ -66,6 +64,7 @@ class LibraryTableViewController: UITableViewController, UITableViewDataSource {
     
     return cell
   }
+
   
   
   /*

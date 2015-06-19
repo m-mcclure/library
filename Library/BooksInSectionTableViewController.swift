@@ -10,20 +10,12 @@ import UIKit
 
 class BooksInSectionTableViewController: UITableViewController, UITableViewDataSource {
   
-  var booksInLitSection = [Book]()
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    let twoCities = Book(title: "A Tale of Two Cities", author: "Dickens, Charles", numberOfPages: 588, isbn10Code: 3918047122)
-    booksInLitSection.append(twoCities)
-    let beowulf = Book(title: "Beowulf", author: "Anonymous", numberOfPages: 844, isbn10Code: 0021827773)
-    booksInLitSection.append(beowulf)
-    
-  
-
+ 
   }
-  
+
   // MARK: - Table view data source
   
   override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -39,11 +31,9 @@ class BooksInSectionTableViewController: UITableViewController, UITableViewDataS
   }
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-  let cell = tableView.dequeueReusableCellWithIdentifier("Book", forIndexPath: indexPath) as! UITableViewCell
+  let cell = tableView.dequeueReusableCellWithIdentifier("BookCell", forIndexPath: indexPath) as! UITableViewCell
   
   // Configure the cell...
-//    
-//    let bookToDisplay = booksInLitSection[indexPath.row]
     cell.textLabel!.text = "umm"
     
   return cell

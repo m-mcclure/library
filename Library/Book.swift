@@ -12,13 +12,11 @@ class Book {
   var title: String
   var author: String
   var numberOfPages: Int
-  var isbn10Code: Int
   var isCheckedOut = false
   
-  init(title: String, author: String, numberOfPages: Int, isbn10Code: Int){
+  init(title: String, author: String, numberOfPages: Int){
     self.title         = title
     self.author        = author
     self.numberOfPages = numberOfPages
-    self.isbn10Code    = isbn10Code
   }
 }
