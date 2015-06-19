@@ -10,10 +10,36 @@ import UIKit
 
 class BooksInSectionTableViewController: UITableViewController, UITableViewDataSource {
   
+  var sectionsArray = [Section]()
   
   override func viewDidLoad() {
     super.viewDidLoad()
- 
+    
+    //create add sections to sections array
+    let literature = Section(section: "Literature")
+    self.sectionsArray.append(literature)
+    
+    let art = Section(section: "Art")
+    self.sectionsArray.append(art)
+    
+    let music = Section(section: "Music")
+    self.sectionsArray.append(music)
+    
+    let science = Section(section: "Science")
+    self.sectionsArray.append(science)
+    
+    let technology = Section(section: "Technology")
+    self.sectionsArray.append(technology)
+    
+    let history = Section(section: "History")
+    self.sectionsArray.append(history)
+    
+    let philosophy = Section(section: "Philosophy")
+    self.sectionsArray.append(philosophy)
+    
+    let reference = Section(section: "Reference")
+    self.sectionsArray.append(reference)
+
   }
 
   // MARK: - Table view data source
@@ -34,7 +60,7 @@ class BooksInSectionTableViewController: UITableViewController, UITableViewDataS
   let cell = tableView.dequeueReusableCellWithIdentifier("BookCell", forIndexPath: indexPath) as! UITableViewCell
   
   // Configure the cell...
-    cell.textLabel!.text = "umm"
+    cell.textLabel!.text = "hmm"
     
   return cell
   }
