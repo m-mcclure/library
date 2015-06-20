@@ -13,10 +13,10 @@
 		34C810E01B336C10006D3B97 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34C810DE1B336C10006D3B97 /* LaunchScreen.xib */; };
 		34C810EC1B336C10006D3B97 /* LibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C810EB1B336C10006D3B97 /* LibraryTests.swift */; };
 		34C810F61B336E4C006D3B97 /* LibraryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C810F51B336E4C006D3B97 /* LibraryTableViewController.swift */; };
-		34C810F91B336ECE006D3B97 /* Sections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C810F81B336ECE006D3B97 /* Sections.swift */; };
+		34C810F91B336ECE006D3B97 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C810F81B336ECE006D3B97 /* Section.swift */; };
 		34C810FD1B3370DD006D3B97 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C810FC1B3370DD006D3B97 /* Book.swift */; };
-		34C811011B338163006D3B97 /* BooksInSectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C811001B338163006D3B97 /* BooksInSectionTableViewController.swift */; };
 		34F5CB461B34C67600E45F2F /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F5CB451B34C67600E45F2F /* Library.swift */; };
+		34F5CB481B34DD2A00E45F2F /* SectionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F5CB471B34DD2A00E45F2F /* SectionsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +40,10 @@
 		34C810EA1B336C10006D3B97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34C810EB1B336C10006D3B97 /* LibraryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTests.swift; sourceTree = "<group>"; };
 		34C810F51B336E4C006D3B97 /* LibraryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryTableViewController.swift; sourceTree = "<group>"; };
-		34C810F81B336ECE006D3B97 /* Sections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sections.swift; sourceTree = "<group>"; };
+		34C810F81B336ECE006D3B97 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		34C810FC1B3370DD006D3B97 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
-		34C811001B338163006D3B97 /* BooksInSectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksInSectionTableViewController.swift; sourceTree = "<group>"; };
 		34F5CB451B34C67600E45F2F /* Library.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
+		34F5CB471B34DD2A00E45F2F /* SectionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				34C810F51B336E4C006D3B97 /* LibraryTableViewController.swift */,
-				34C811001B338163006D3B97 /* BooksInSectionTableViewController.swift */,
+				34F5CB471B34DD2A00E45F2F /* SectionsTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -142,7 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				34F5CB451B34C67600E45F2F /* Library.swift */,
-				34C810F81B336ECE006D3B97 /* Sections.swift */,
+				34C810F81B336ECE006D3B97 /* Section.swift */,
 				34C810FC1B3370DD006D3B97 /* Book.swift */,
 			);
 			name = Models;
@@ -248,10 +248,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34C811011B338163006D3B97 /* BooksInSectionTableViewController.swift in Sources */,
 				34C810FD1B3370DD006D3B97 /* Book.swift in Sources */,
+				34F5CB481B34DD2A00E45F2F /* SectionsTableViewController.swift in Sources */,
 				34C810F61B336E4C006D3B97 /* LibraryTableViewController.swift in Sources */,
-				34C810F91B336ECE006D3B97 /* Sections.swift in Sources */,
+				34C810F91B336ECE006D3B97 /* Section.swift in Sources */,
 				34C810D61B336C10006D3B97 /* AppDelegate.swift in Sources */,
 				34F5CB461B34C67600E45F2F /* Library.swift in Sources */,
 			);

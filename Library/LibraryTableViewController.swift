@@ -12,21 +12,51 @@ class LibraryTableViewController: UITableViewController, UITableViewDataSource {
   
   var libraries = [Library]()
   
+  var standardSections = [Section]()
+
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    let ballard = Library(name: "Ballard", address: "322 Maple Street", hoursOp: "9:00-21:00")
+    
+    let literature = Section(section: "Literature")
+    standardSections.append(literature)
+    
+    let art = Section(section: "Art")
+    standardSections.append(art)
+    
+    let music = Section(section: "Music")
+    standardSections.append(music)
+    
+    let science = Section(section: "Science")
+    standardSections.append(science)
+    
+    let technology = Section(section: "Technology")
+    standardSections.append(technology)
+    
+    let philosophy = Section(section: "Philosophy")
+    standardSections.append(philosophy)
+    
+    let history = Section(section: "History")
+    standardSections.append(history)
+    
+    let reference = Section(section: "Reference")
+    standardSections.append(reference)
+    
+    let ballard = Library(name: "Ballard", address: "322 Maple Street", hoursOp: "9:00-21:00", sections: standardSections)
     libraries.append(ballard)
     
-    let capitolHill = Library(name: "Capitol Hill", address: "1443 E. Pike Street", hoursOp: "9:00-20:00")
+    let capitolHill = Library(name: "Capitol Hill", address: "1443 E. Pike Street", hoursOp: "9:00-20:00", sections: standardSections)
     libraries.append(capitolHill)
     
-    let queenAnne = Library(name: "Queen Anne", address: "456 Park Avenue", hoursOp: "8:00-15:00")
+    let queenAnne = Library(name: "Queen Anne", address: "456 Park Avenue", hoursOp: "8:00-15:00", sections: standardSections)
     libraries.append(queenAnne)
     
-    let sLU = Library(name: "South Lake Union", address: "512 Boren Ave N.", hoursOp: "10:00-18:00")
+    let sLU = Library(name: "South Lake Union", address: "512 Boren Ave N.", hoursOp: "10:00-18:00", sections: standardSections)
     libraries.append(sLU)
+
+    
+    println(ballard.sections.count)
   }
   
   // MARK: - Table view data source
@@ -53,18 +83,19 @@ class LibraryTableViewController: UITableViewController, UITableViewDataSource {
     return cell
   }
   
-  /*override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    if segue.identifier == "ShowBooks" {
-      let personDetailViewController = segue.destinationViewController as! PersonDetailViewController
-      let indexPath = self.tableView.indexPathForSelectedRow()
-      let selectedRow = indexPath!.row
-      let selectedPerson = self.roster[selectedRow]
-      println(selectedPerson.firstName)
-      personDetailViewController.selectedPerson = selectedPerson
-    }
-  }*/
+    let nav = segue.destinationViewController as! UINavigationController
+    let sectionsController = nav.topViewController as! SectionsTableViewController
+    let indexPath = self.tableView.indexPathForSelectedRow()
+    let selectedRow = indexPath!.row
+    let selectedLibrary = self.libraries[selectedRow]
+    sectionsController.selectedLibrary = selectedLibrary
+    println(selectedLibrary.name)
+    
+  }
+  
   
   
   

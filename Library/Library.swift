@@ -12,10 +12,13 @@ class Library {
   var name: String
   var address: String
   var hoursOfOperation: String
+  var sections = [Section]()
   
-  init(name: String, address: String, hoursOp: String){
+  init(name: String, address: String, hoursOp: String, sections: Array<Section>){
     self.name             = name
     self.address          = address
     self.hoursOfOperation = hoursOp
+    self.sections         = sections
   }
 }
+
