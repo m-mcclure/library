@@ -34,7 +34,7 @@ class EditBookTableViewController: UITableViewController, UITextFieldDelegate,UI
     
     self.titleField.text = self.bookForEdit.title
     self.authorField.text = self.bookForEdit.author
-    //self.pagesField = self.bookForEdit.numberOfPages
+    self.pagesField.text = String(self.bookForEdit.numberOfPages)
   }
   
   func textFieldDidEndEditing(textField: UITextField){
@@ -42,10 +42,9 @@ class EditBookTableViewController: UITableViewController, UITextFieldDelegate,UI
       self.bookForEdit.title = titleField.text
     } else if textField.tag == 1 {
       self.bookForEdit.author = authorField.text
-    } /*else if textField.tag == 2 {
-      self.selectedPerson.twitter = textField.text
-    }*/
-    println(bookForEdit.title)
+    } else if textField.tag == 2 {
+      self.bookForEdit.numberOfPages = pagesField.text.toInt()!
+    }
   }
   
   func textFieldShouldReturn(textField: UITextField) -> Bool {
