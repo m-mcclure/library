@@ -11,53 +11,195 @@ import UIKit
 class LibraryTableViewController: UITableViewController, UITableViewDataSource {
   
   var libraries = [Library]()
-  
-  var standardSections = [Section]()
-
+  //var defaultSections = [Section]()
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
+//    //create library sections and append to sections array
+//    let art = Section(section: "Art")
+//    defaultSections.append(art)
+//    
+//    let fiction = Section(section: "Fiction")
+//    defaultSections.append(fiction)
+//    
+//    let history = Section(section: "History")
+//    defaultSections.append(history)
+//    
+//    let music = Section(section: "Music")
+//    defaultSections.append(music)
+//    
+//    let philosophy = Section(section: "Philosophy")
+//    defaultSections.append(philosophy)
+//    
+//    let reference = Section(section: "Reference")
+//    defaultSections.append(reference)
+//    
+//    let science = Section(section: "Science")
+//    defaultSections.append(science)
+//    
+//    let technology = Section(section: "Technology")
+//    defaultSections.append(technology)
     
-    let literature = Section(section: "Literature")
-    standardSections.append(literature)
-    
-    let art = Section(section: "Art")
-    standardSections.append(art)
-    
-    let music = Section(section: "Music")
-    standardSections.append(music)
-    
-    let science = Section(section: "Science")
-    standardSections.append(science)
-    
-    let technology = Section(section: "Technology")
-    standardSections.append(technology)
-    
-    let philosophy = Section(section: "Philosophy")
-    standardSections.append(philosophy)
-    
-    let history = Section(section: "History")
-    standardSections.append(history)
-    
-    let reference = Section(section: "Reference")
-    standardSections.append(reference)
-    
-    let ballard = Library(name: "Ballard", address: "322 Maple Street", hoursOp: "9:00-21:00", sections: standardSections)
+    //create library branches and append to library array
+    let ballard = Library(name: "Ballard", address: "322 Maple Street", hoursOp: "9:00-21:00")
     libraries.append(ballard)
     
-    let capitolHill = Library(name: "Capitol Hill", address: "1443 E. Pike Street", hoursOp: "9:00-20:00", sections: standardSections)
+    let capitolHill = Library(name: "Capitol Hill", address: "1443 E. Pike Street", hoursOp: "9:00-20:00")
     libraries.append(capitolHill)
     
-    let queenAnne = Library(name: "Queen Anne", address: "456 Park Avenue", hoursOp: "8:00-15:00", sections: standardSections)
+    let columbia = Library(name: "Columbia", address: "444 Main Street", hoursOp: "9:00-20:00")
+    libraries.append(columbia)
+    
+    let fremont = Library(name: "Fremont", address: "731 N. 35th St.", hoursOp: "9:00-15:00")
+    libraries.append(fremont)
+    
+    let magnolia = Library(name: "Magnolia", address: "2490 Elm St.", hoursOp: "8:00-20:00")
+    libraries.append(magnolia)
+    
+    let queenAnne = Library(name: "Queen Anne", address: "456 Park Avenue", hoursOp: "8:00-15:00")
     libraries.append(queenAnne)
     
-    let sLU = Library(name: "South Lake Union", address: "512 Boren Ave N.", hoursOp: "10:00-18:00", sections: standardSections)
-    libraries.append(sLU)
-
+    let rainierBeach = Library(name: "Rainier Beach", address: "24 Pine Avenue", hoursOp: "10:00-20:00")
+    libraries.append(rainierBeach)
     
-    println(ballard.sections.count)
+    let sLU = Library(name: "South Lake Union", address: "512 Boren Ave N.", hoursOp: "10:00-18:00")
+    libraries.append(sLU)
+    
+    let wallingford = Library(name: "Wallingford", address: "3440 Almeda St.", hoursOp: "9:00-21:00")
+    libraries.append(wallingford)
+    
+//    //default books placed in each art section:
+//    let picassosBluePeriod = Book(title: "Picasso's Blue Period", author: "Melora Walters", numberOfPages: 245)
+//    art.booksInSection.append(picassosBluePeriod)
+//    
+//    let deKooning = Book(title: "Willem De Kooning: A Retrospective", author: "Paul Thompson", numberOfPages: 199)
+//    deKooning.isCheckedOut = true
+//    art.booksInSection.append(deKooning)
+//    
+//    let seventeenthCentury = Book(title: "Masters of the 17th Century", author: "Violet Williams", numberOfPages: 411)
+//    art.booksInSection.append(seventeenthCentury)
+//    
+//    //default books in each fiction section:
+//    let theHobbit = Book(title: "The Hobbit", author: "J.R.R. Tolkien", numberOfPages: 442)
+//    fiction.booksInSection.append(theHobbit)
+//    
+//    let braveNewWorld = Book(title: "Brave New World", author: "Aldous Huxley", numberOfPages: 227)
+//    braveNewWorld.isCheckedOut = true
+//    fiction.booksInSection.append(braveNewWorld)
+//    
+//    let nineteenEightyFour = Book(title: "1984", author: "George Orwell", numberOfPages: 304)
+//    nineteenEightyFour.isCheckedOut = true
+//    fiction.booksInSection.append(nineteenEightyFour)
+//    
+//    let aTaleOf2Cities = Book(title: "A Tale of Two Cities", author: "Charles Dickens", numberOfPages: 545)
+//    fiction.booksInSection.append(aTaleOf2Cities)
+//    
+//    let talesFromTheFarSide = Book(title: "Tales from the Far Side", author: "Gary Larson", numberOfPages: 202)
+//    fiction.booksInSection.append(talesFromTheFarSide)
+//    
+//    let deepThoughts = Book(title: "Deep Thoughts by Jack Handey", author: "Jack Handey", numberOfPages: 98)
+//    fiction.booksInSection.append(deepThoughts)
+//    
+//    //default books in each history section:
+//    let wwII = Book(title: "A History of WWII", author: "James Johnson", numberOfPages: 888)
+//    history.booksInSection.append(wwII)
+//    
+//    let frenchRev = Book(title: "The French Revolution", author: "Judy Denmark", numberOfPages: 454)
+//    frenchRev.isCheckedOut = true
+//    history.booksInSection.append(frenchRev)
+//    
+//    let theGreatWall = Book(title: "The Great Wall of China", author: "Sally Struthers", numberOfPages: 712)
+//    history.booksInSection.append(theGreatWall)
+//    
+//    //default books in each music section
+//    let feldman = Book(title: "Morton Feldman", author: "Carl Junior", numberOfPages: 117)
+//    music.booksInSection.append(feldman)
+//    
+//    let baroque = Book(title: "Obscure Baroque Composers", author: "Vince Garamond", numberOfPages: 42)
+//    music.booksInSection.append(baroque)
+//    
+//    let rhapsody = Book(title: "Rhapsody: The Life of Franz Liszt", author: "Leslie Fields", numberOfPages: 233)
+//    music.booksInSection.append(rhapsody)
+//    
+//    let tinPan = Book(title: "The Songwriters of Tin Pan Alley", author: "Roger Jeffreys", numberOfPages: 102)
+//    tinPan.isCheckedOut = true
+//    music.booksInSection.append(tinPan)
+//    
+//    let composersOf19thI = Book(title: "19th Century Composers, Part I", author: "Jason Johns", numberOfPages: 244)
+//    music.booksInSection.append(composersOf19thI)
+//    
+//    let composersOf19thII = Book(title: "19th Century Composers, Part II", author: "Jason Johns", numberOfPages: 164)
+//    music.booksInSection.append(composersOf19thII)
+//    
+//    let composersOf19thIII = Book(title: "19th Century Composers, Part III", author: "Jason Johns", numberOfPages: 303)
+//    composersOf19thIII.isCheckedOut = true
+//    music.booksInSection.append(composersOf19thIII)
+//    
+//    let composersOf19thIV = Book(title: "19th Century Composers, Part IV", author: "Jason Johns", numberOfPages: 244)
+//    composersOf19thIV.isCheckedOut = true
+//    music.booksInSection.append(composersOf19thIV)
+//    
+//    let composersOf19thV = Book(title: "19th Century Composers, Part V", author: "Jason Johns", numberOfPages: 109)
+//    composersOf19thV.isCheckedOut = true
+//    music.booksInSection.append(composersOf19thV)
+//    
+//    let composersOf19thVI = Book(title: "19th Century Composers, Part VI", author: "Jason Johns", numberOfPages: 111)
+//    music.booksInSection.append(composersOf19thVI)
+//    
+//    let einstein = Book(title: "Einstein on the Beach: An Analysis", author: "Virgil Thomas", numberOfPages: 322)
+//    music.booksInSection.append(einstein)
+//    
+//    //default books in philosophy
+//    let genealogyOfMorals = Book(title: "On the Genealogy of Morals", author: "Friedrich Nietzsche", numberOfPages: 242)
+//    philosophy.booksInSection.append(genealogyOfMorals)
+//    
+//    let ancientGreeks = Book(title: "From Plato to Socrates", author: "Vicki Price", numberOfPages: 400)
+//    ancientGreeks.isCheckedOut = true
+//    philosophy.booksInSection.append(ancientGreeks)
+//    
+//    //default books in reference section
+//    let oxfordEng = Book(title: "Oxford English Dictionary", author: "Oxford University Press", numberOfPages: 1841)
+//    reference.booksInSection.append(oxfordEng)
+//    
+//    let rogets = Book(title: "Roget's Thesaurus", author: "Fred Roget", numberOfPages: 250)
+//    reference.booksInSection.append(rogets)
+//    
+//    //default books in science section
+//    let fabric = Book(title: "The Fabric of the Cosmos", author: "Brian Greene", numberOfPages: 200)
+//    science.booksInSection.append(fabric)
+//    
+//    let friction = Book(title: "Friction: A Final Frontier", author: "David Larsfeld", numberOfPages: 333)
+//    science.booksInSection.append(friction)
+//    
+//    let origin = Book(title: "On the Origin of Species", author: "Charles Dickens", numberOfPages: 338)
+//    origin.isCheckedOut = true
+//    science.booksInSection.append(origin)
+//    
+//    let heisenberg = Book(title: "The Heisenberg Uncertainty Prinicple", author: "Briana Xu", numberOfPages: 200)
+//    science.booksInSection.append(heisenberg)
+//    
+//    //default books in tech section
+//    let iOSVolI = Book(title: "iOS Programming, Volume I", author: "Terry Green", numberOfPages: 222)
+//    technology.booksInSection.append(iOSVolI)
+//    
+//    let iOSVolII = Book(title: "iOS Programming, Volume II", author: "Terry Green", numberOfPages: 245)
+//    technology.booksInSection.append(iOSVolII)
+//    
+//    let iOSVolIII = Book(title: "iOS Programming, Volume III", author: "Terry Green", numberOfPages: 192)
+//    technology.booksInSection.append(iOSVolIII)
+//    
+//    let iOSVolIV = Book(title: "iOS Programming, Volume IV", author: "Terry Green", numberOfPages: 222)
+//    technology.booksInSection.append(iOSVolIV)
+//    
+//    let iOSVolV = Book(title: "iOS Programming Volume V", author: "Terry Green", numberOfPages: 323)
+//    technology.booksInSection.append(iOSVolV)
+//    
+//    let hackers = Book(title: "Hacker's Delight", author: "Henry S. Warren, Jr.", numberOfPages: 495)
+//    hackers.isCheckedOut = true
+//    technology.booksInSection.append(hackers)
   }
+  
   
   // MARK: - Table view data source
   
@@ -77,10 +219,14 @@ class LibraryTableViewController: UITableViewController, UITableViewDataSource {
     let cell = tableView.dequeueReusableCellWithIdentifier("libraryCell") as! UITableViewCell
     
     // Configure the cell...
-    let sectionToDisplay = self.libraries[indexPath.row]
-    cell.textLabel!.text = sectionToDisplay.name
-    
+    let libraryToDisplay = self.libraries[indexPath.row]
+    cell.textLabel!.text = libraryToDisplay.name
     return cell
+  }
+  
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    self.tableView.reloadData()
   }
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -93,55 +239,5 @@ class LibraryTableViewController: UITableViewController, UITableViewDataSource {
     let selectedLibrary = self.libraries[selectedRow]
     sectionsController.selectedLibrary = selectedLibrary
     println(selectedLibrary.name)
-    
   }
-  
-  
-  
-  
-  /*
-  // Override to support conditional editing of the table view.
-  override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-  // Return NO if you do not want the specified item to be editable.
-  return true
-  }
-  */
-  
-  /*
-  // Override to support editing the table view.
-  override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-  if editingStyle == .Delete {
-  // Delete the row from the data source
-  tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-  } else if editingStyle == .Insert {
-  // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-  }
-  }
-  */
-  
-  /*
-  // Override to support rearranging the table view.
-  override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-  
-  }
-  */
-  
-  /*
-  // Override to support conditional rearranging of the table view.
-  override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-  // Return NO if you do not want the item to be re-orderable.
-  return true
-  }
-  */
-  
-  /*
-  // MARK: - Navigation
-  
-  // In a storyboard-based application, you will often want to do a little preparation before navigation
-  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-  // Get the new view controller using [segue destinationViewController].
-  // Pass the selected object to the new view controller.
-  }
-  */
-  
 }

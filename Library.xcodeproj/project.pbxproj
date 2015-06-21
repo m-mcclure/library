@@ -15,6 +15,9 @@
 		34C810F61B336E4C006D3B97 /* LibraryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C810F51B336E4C006D3B97 /* LibraryTableViewController.swift */; };
 		34C810F91B336ECE006D3B97 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C810F81B336ECE006D3B97 /* Section.swift */; };
 		34C810FD1B3370DD006D3B97 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C810FC1B3370DD006D3B97 /* Book.swift */; };
+		34E14CBB1B363C29009496D5 /* BooksInSectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E14CBA1B363C29009496D5 /* BooksInSectionTableViewController.swift */; };
+		34E14CBD1B364935009496D5 /* AddBookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E14CBC1B364935009496D5 /* AddBookTableViewController.swift */; };
+		34E14CC11B36538F009496D5 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E14CC01B36538F009496D5 /* BookDetailViewController.swift */; };
 		34F5CB461B34C67600E45F2F /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F5CB451B34C67600E45F2F /* Library.swift */; };
 		34F5CB481B34DD2A00E45F2F /* SectionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F5CB471B34DD2A00E45F2F /* SectionsTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +45,9 @@
 		34C810F51B336E4C006D3B97 /* LibraryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryTableViewController.swift; sourceTree = "<group>"; };
 		34C810F81B336ECE006D3B97 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		34C810FC1B3370DD006D3B97 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		34E14CBA1B363C29009496D5 /* BooksInSectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksInSectionTableViewController.swift; sourceTree = "<group>"; };
+		34E14CBC1B364935009496D5 /* AddBookTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBookTableViewController.swift; sourceTree = "<group>"; };
+		34E14CC01B36538F009496D5 /* BookDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
 		34F5CB451B34C67600E45F2F /* Library.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		34F5CB471B34DD2A00E45F2F /* SectionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,6 +140,9 @@
 			children = (
 				34C810F51B336E4C006D3B97 /* LibraryTableViewController.swift */,
 				34F5CB471B34DD2A00E45F2F /* SectionsTableViewController.swift */,
+				34E14CBA1B363C29009496D5 /* BooksInSectionTableViewController.swift */,
+				34E14CBC1B364935009496D5 /* AddBookTableViewController.swift */,
+				34E14CC01B36538F009496D5 /* BookDetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -250,7 +259,10 @@
 			files = (
 				34C810FD1B3370DD006D3B97 /* Book.swift in Sources */,
 				34F5CB481B34DD2A00E45F2F /* SectionsTableViewController.swift in Sources */,
+				34E14CBB1B363C29009496D5 /* BooksInSectionTableViewController.swift in Sources */,
 				34C810F61B336E4C006D3B97 /* LibraryTableViewController.swift in Sources */,
+				34E14CBD1B364935009496D5 /* AddBookTableViewController.swift in Sources */,
+				34E14CC11B36538F009496D5 /* BookDetailViewController.swift in Sources */,
 				34C810F91B336ECE006D3B97 /* Section.swift in Sources */,
 				34C810D61B336C10006D3B97 /* AppDelegate.swift in Sources */,
 				34F5CB461B34C67600E45F2F /* Library.swift in Sources */,
