@@ -446,18 +446,38 @@
                                                         </mask>
                                                     </variation>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zk2-gw-47z">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="                    " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zk2-gw-47z">
                                                     <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="312" id="3yU-7U-xSf"/>
+                                                        <constraint firstAttribute="height" constant="30" id="yKY-yQ-mGK"/>
+                                                        <constraint firstAttribute="width" constant="250" id="ysA-AT-yNA">
+                                                            <variation key="heightClass=regular" constant="220"/>
+                                                        </constraint>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                    <variation key="heightClass=regular" fixedFrame="YES">
-                                                        <rect key="frame" x="72" y="7" width="312" height="30"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="3yU-7U-xSf"/>
+                                                            <exclude reference="yKY-yQ-mGK"/>
+                                                            <exclude reference="ysA-AT-yNA"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="heightClass=regular">
+                                                        <mask key="constraints">
+                                                            <exclude reference="3yU-7U-xSf"/>
+                                                            <include reference="yKY-yQ-mGK"/>
+                                                            <include reference="ysA-AT-yNA"/>
+                                                        </mask>
                                                     </variation>
                                                 </textField>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="centerY" secondItem="pd8-BY-9pd" secondAttribute="centerY" id="6BC-a3-FRl"/>
+                                                <constraint firstItem="Zk2-gw-47z" firstAttribute="leading" secondItem="pd8-BY-9pd" secondAttribute="trailing" constant="8" id="MTc-pc-h2F"/>
                                                 <constraint firstItem="pd8-BY-9pd" firstAttribute="leading" secondItem="VOo-KY-5hH" secondAttribute="leadingMargin" id="ehF-ht-Ecc"/>
+                                                <constraint firstAttribute="centerY" secondItem="Zk2-gw-47z" secondAttribute="centerY" id="ytp-ZL-1bX"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="subviews">
@@ -465,6 +485,8 @@
                                                     <exclude reference="Zk2-gw-47z"/>
                                                 </mask>
                                                 <mask key="constraints">
+                                                    <exclude reference="MTc-pc-h2F"/>
+                                                    <exclude reference="ytp-ZL-1bX"/>
                                                     <exclude reference="6BC-a3-FRl"/>
                                                     <exclude reference="ehF-ht-Ecc"/>
                                                 </mask>
@@ -475,6 +497,8 @@
                                                     <include reference="Zk2-gw-47z"/>
                                                 </mask>
                                                 <mask key="constraints">
+                                                    <include reference="MTc-pc-h2F"/>
+                                                    <include reference="ytp-ZL-1bX"/>
                                                     <include reference="6BC-a3-FRl"/>
                                                     <include reference="ehF-ht-Ecc"/>
                                                 </mask>
@@ -514,37 +538,67 @@
                                                         </mask>
                                                     </variation>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kea-AV-m1L">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="                    " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MvR-af-KhI">
                                                     <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="220" id="DHc-px-4Ym"/>
+                                                        <constraint firstAttribute="width" constant="250" id="FQS-Me-N2B">
+                                                            <variation key="heightClass=regular" constant="220"/>
+                                                        </constraint>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="gYl-0L-Fk3"/>
+                                                        <constraint firstAttribute="height" constant="30" id="rTA-pv-r4O"/>
+                                                        <constraint firstAttribute="width" constant="312" id="y1L-Vp-tPV"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                    <variation key="heightClass=regular" fixedFrame="YES">
-                                                        <rect key="frame" x="72" y="5" width="312" height="30"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="DHc-px-4Ym"/>
+                                                            <exclude reference="FQS-Me-N2B"/>
+                                                            <exclude reference="gYl-0L-Fk3"/>
+                                                            <exclude reference="rTA-pv-r4O"/>
+                                                            <exclude reference="y1L-Vp-tPV"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="heightClass=regular">
+                                                        <mask key="constraints">
+                                                            <include reference="DHc-px-4Ym"/>
+                                                            <include reference="FQS-Me-N2B"/>
+                                                            <include reference="gYl-0L-Fk3"/>
+                                                            <include reference="rTA-pv-r4O"/>
+                                                            <exclude reference="y1L-Vp-tPV"/>
+                                                        </mask>
                                                     </variation>
                                                 </textField>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="MvR-af-KhI" firstAttribute="leading" secondItem="Mkg-2k-RMK" secondAttribute="trailing" constant="8" id="cX2-yT-xY5"/>
                                                 <constraint firstAttribute="centerY" secondItem="Mkg-2k-RMK" secondAttribute="centerY" id="mod-Ta-MDF"/>
                                                 <constraint firstItem="Mkg-2k-RMK" firstAttribute="leading" secondItem="5a7-4L-fsq" secondAttribute="leadingMargin" id="vnC-YV-Lmr"/>
+                                                <constraint firstAttribute="centerY" secondItem="MvR-af-KhI" secondAttribute="centerY" id="w99-DA-wK6"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="subviews">
                                                     <exclude reference="Mkg-2k-RMK"/>
-                                                    <exclude reference="kea-AV-m1L"/>
+                                                    <exclude reference="MvR-af-KhI"/>
                                                 </mask>
                                                 <mask key="constraints">
                                                     <exclude reference="mod-Ta-MDF"/>
                                                     <exclude reference="vnC-YV-Lmr"/>
+                                                    <exclude reference="cX2-yT-xY5"/>
+                                                    <exclude reference="w99-DA-wK6"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular">
                                                 <mask key="subviews">
                                                     <include reference="Mkg-2k-RMK"/>
-                                                    <include reference="kea-AV-m1L"/>
+                                                    <include reference="MvR-af-KhI"/>
                                                 </mask>
                                                 <mask key="constraints">
                                                     <include reference="mod-Ta-MDF"/>
                                                     <include reference="vnC-YV-Lmr"/>
+                                                    <include reference="cX2-yT-xY5"/>
+                                                    <include reference="w99-DA-wK6"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -592,37 +646,73 @@
                                                         </mask>
                                                     </variation>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BcZ-H8-ndn">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="                    " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="chj-sM-5xB">
                                                     <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="30" id="78O-pB-uOE"/>
+                                                        <constraint firstAttribute="width" constant="250" id="9gj-Lb-h3U">
+                                                            <variation key="heightClass=regular" constant="220"/>
+                                                        </constraint>
+                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="220" id="DGF-gv-Q51"/>
+                                                        <constraint firstAttribute="height" constant="30" id="IzI-yX-pdb"/>
+                                                        <constraint firstAttribute="width" constant="312" id="Lf7-UC-N2y"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="XCZ-Wq-b6r"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="220" id="jd9-g2-rDL"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                                    <variation key="heightClass=regular" fixedFrame="YES">
-                                                        <rect key="frame" x="72" y="7" width="312" height="30"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="78O-pB-uOE"/>
+                                                            <exclude reference="9gj-Lb-h3U"/>
+                                                            <exclude reference="DGF-gv-Q51"/>
+                                                            <exclude reference="IzI-yX-pdb"/>
+                                                            <exclude reference="Lf7-UC-N2y"/>
+                                                            <exclude reference="XCZ-Wq-b6r"/>
+                                                            <exclude reference="jd9-g2-rDL"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="heightClass=regular">
+                                                        <mask key="constraints">
+                                                            <include reference="78O-pB-uOE"/>
+                                                            <include reference="9gj-Lb-h3U"/>
+                                                            <include reference="DGF-gv-Q51"/>
+                                                            <include reference="IzI-yX-pdb"/>
+                                                            <exclude reference="Lf7-UC-N2y"/>
+                                                            <include reference="XCZ-Wq-b6r"/>
+                                                            <include reference="jd9-g2-rDL"/>
+                                                        </mask>
                                                     </variation>
                                                 </textField>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="centerY" secondItem="x6N-KG-QVc" secondAttribute="centerY" id="GAY-aG-rXF"/>
+                                                <constraint firstAttribute="centerY" secondItem="chj-sM-5xB" secondAttribute="centerY" id="S2h-CQ-BNc"/>
+                                                <constraint firstItem="chj-sM-5xB" firstAttribute="leading" secondItem="x6N-KG-QVc" secondAttribute="trailing" constant="8" id="anX-jF-Pou"/>
                                                 <constraint firstItem="x6N-KG-QVc" firstAttribute="leading" secondItem="vRu-5I-zMA" secondAttribute="leadingMargin" id="jPf-0O-PSI"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="subviews">
                                                     <exclude reference="x6N-KG-QVc"/>
-                                                    <exclude reference="BcZ-H8-ndn"/>
+                                                    <exclude reference="chj-sM-5xB"/>
                                                 </mask>
                                                 <mask key="constraints">
                                                     <exclude reference="GAY-aG-rXF"/>
                                                     <exclude reference="jPf-0O-PSI"/>
+                                                    <exclude reference="S2h-CQ-BNc"/>
+                                                    <exclude reference="anX-jF-Pou"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular">
                                                 <mask key="subviews">
                                                     <include reference="x6N-KG-QVc"/>
-                                                    <include reference="BcZ-H8-ndn"/>
+                                                    <include reference="chj-sM-5xB"/>
                                                 </mask>
                                                 <mask key="constraints">
                                                     <include reference="GAY-aG-rXF"/>
                                                     <include reference="jPf-0O-PSI"/>
+                                                    <include reference="S2h-CQ-BNc"/>
+                                                    <include reference="anX-jF-Pou"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -648,8 +738,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="authorField" destination="kea-AV-m1L" id="Qai-tx-qh2"/>
-                        <outlet property="pagesField" destination="BcZ-H8-ndn" id="rda-hL-CgI"/>
                         <outlet property="titleField" destination="Zk2-gw-47z" id="0Kn-D0-Gla"/>
                     </connections>
                 </tableViewController>
