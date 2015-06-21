@@ -18,8 +18,8 @@ class AddBookTableViewController: UITableViewController {
   @IBAction func doneButtonPressed(sender: UIBarButtonItem) {
     newBook.title = titleField!.text
     newBook.author = authorField!.text
-    let textToInt = pagesField!.text.toInt()
-    newBook.numberOfPages = textToInt!
+    //let textToInt = pagesField!.text.toInt()
+    //newBook.numberOfPages = textToInt!
     dismissViewControllerAnimated(true, completion: nil)
   }
   

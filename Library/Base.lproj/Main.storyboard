@@ -738,6 +738,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="authorField" destination="MvR-af-KhI" id="VXH-TW-RyI"/>
+                        <outlet property="pagesField" destination="chj-sM-5xB" id="0Md-d7-Ubl"/>
                         <outlet property="titleField" destination="Zk2-gw-47z" id="0Kn-D0-Gla"/>
                     </connections>
                 </tableViewController>
