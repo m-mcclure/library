@@ -56,7 +56,7 @@ class BooksInSectionTableViewController: UITableViewController, UINavigationCont
       cell.detailTextLabel!.textColor = beryl
       cell.detailTextLabel!.text = "Available"
     } else {
-      let checkedOutColor = UIColor(red: 255.0/255.0, green: 121.0/255.0, blue: 112.0/255.0, alpha: 1)
+      let checkedOutColor = UIColor(red: 220.0/255.0, green: 73.0/255.0, blue: 71.0/255.0, alpha: 1)
       cell.detailTextLabel!.textColor = checkedOutColor
       cell.detailTextLabel!.text = "Checked Out"
     }

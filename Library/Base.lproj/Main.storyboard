@@ -238,7 +238,7 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="BH3-xe-PgZ"/>
                                     <constraint firstAttribute="width" constant="136" id="pee-Bj-lir"/>
                                 </constraints>
-                                <state key="normal" title="Toggle Book Status">
+                                <state key="normal" title="Check Out Book">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -285,6 +285,32 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yo-Zk-5oL">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="0Hw-n9-n3t"/>
+                                    <constraint firstAttribute="width" constant="136" id="H28-Nz-5UY"/>
+                                </constraints>
+                                <state key="normal" title="Return Book">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0Hw-n9-n3t"/>
+                                        <exclude reference="H28-Nz-5UY"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="199" y="607" width="200" height="30"/>
+                                    <mask key="constraints">
+                                        <include reference="0Hw-n9-n3t"/>
+                                        <exclude reference="H28-Nz-5UY"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="checkoutOrReturnButton:" destination="FUi-IM-E7r" eventType="touchUpInside" id="q1c-ge-3j0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.63529411759999999" green="0.84313725490000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -295,6 +321,7 @@
                             </constraint>
                             <constraint firstItem="PQk-Gn-Rgq" firstAttribute="height" secondItem="o3b-L2-e2K" secondAttribute="height" id="9V3-8E-FfC"/>
                             <constraint firstItem="gvE-g4-wvN" firstAttribute="centerX" secondItem="7sC-eI-QS7" secondAttribute="centerX" constant="0.5" id="C7D-P3-nWx"/>
+                            <constraint firstItem="3yo-Zk-5oL" firstAttribute="top" secondItem="yPw-Xv-cKS" secondAttribute="bottom" constant="8" id="E7I-7n-Xs3"/>
                             <constraint firstAttribute="centerX" secondItem="yPw-Xv-cKS" secondAttribute="centerX" id="GGE-GI-0zu"/>
                             <constraint firstItem="ptr-PU-zec" firstAttribute="top" secondItem="yPw-Xv-cKS" secondAttribute="bottom" constant="8" id="IoD-Uv-Nbo"/>
                             <constraint firstItem="yPw-Xv-cKS" firstAttribute="top" secondItem="gvE-g4-wvN" secondAttribute="bottom" constant="8" id="M5t-XG-Kmr"/>
@@ -310,8 +337,10 @@
                             <constraint firstItem="o3b-L2-e2K" firstAttribute="top" secondItem="ptr-PU-zec" secondAttribute="bottom" constant="15" id="b1G-cX-7tS">
                                 <variation key="heightClass=regular" constant="8"/>
                             </constraint>
+                            <constraint firstAttribute="centerX" secondItem="3yo-Zk-5oL" secondAttribute="centerX" id="cAQ-bD-Io9"/>
                             <constraint firstItem="yPw-Xv-cKS" firstAttribute="top" secondItem="gvE-g4-wvN" secondAttribute="bottom" constant="8" id="dCr-75-NHU"/>
                             <constraint firstAttribute="centerX" secondItem="gvE-g4-wvN" secondAttribute="centerX" id="dmY-YT-Fni"/>
+                            <constraint firstItem="3yo-Zk-5oL" firstAttribute="top" secondItem="yPw-Xv-cKS" secondAttribute="bottom" constant="8" id="frC-hn-gao"/>
                             <constraint firstAttribute="centerX" secondItem="WDh-bE-H89" secondAttribute="centerX" id="i3v-Pk-a1o"/>
                             <constraint firstItem="PQk-Gn-Rgq" firstAttribute="width" secondItem="o3b-L2-e2K" secondAttribute="width" id="jVL-y5-VhF"/>
                             <constraint firstItem="gvE-g4-wvN" firstAttribute="top" secondItem="WDh-bE-H89" secondAttribute="bottom" constant="-155" id="k4P-Xo-hxi"/>
@@ -329,23 +358,9 @@
                                 <exclude reference="ptr-PU-zec"/>
                                 <exclude reference="WDh-bE-H89"/>
                                 <exclude reference="7sC-eI-QS7"/>
+                                <exclude reference="3yo-Zk-5oL"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="3aM-Sa-nVE"/>
-                                <exclude reference="i3v-Pk-a1o"/>
-                                <exclude reference="zht-xi-llW"/>
-                                <exclude reference="ldj-vP-e5a"/>
-                                <exclude reference="GGE-GI-0zu"/>
-                                <exclude reference="M5t-XG-Kmr"/>
-                                <exclude reference="Rc4-uz-d9x"/>
-                                <exclude reference="RpF-W9-gZ1"/>
-                                <exclude reference="T6S-7J-kyK"/>
-                                <exclude reference="XKq-7B-6os"/>
-                                <exclude reference="dCr-75-NHU"/>
-                                <exclude reference="luG-23-fF9"/>
-                                <exclude reference="3hc-Gu-bCr"/>
-                                <exclude reference="IoD-Uv-Nbo"/>
-                                <exclude reference="Rse-9o-j71"/>
                                 <exclude reference="9V3-8E-FfC"/>
                                 <exclude reference="PsK-HQ-OX4"/>
                                 <exclude reference="jVL-y5-VhF"/>
@@ -354,8 +369,26 @@
                                 <exclude reference="C7D-P3-nWx"/>
                                 <exclude reference="dmY-YT-Fni"/>
                                 <exclude reference="k4P-Xo-hxi"/>
+                                <exclude reference="i3v-Pk-a1o"/>
+                                <exclude reference="zht-xi-llW"/>
+                                <exclude reference="3aM-Sa-nVE"/>
+                                <exclude reference="GGE-GI-0zu"/>
+                                <exclude reference="M5t-XG-Kmr"/>
+                                <exclude reference="Rc4-uz-d9x"/>
+                                <exclude reference="RpF-W9-gZ1"/>
+                                <exclude reference="T6S-7J-kyK"/>
+                                <exclude reference="XKq-7B-6os"/>
+                                <exclude reference="dCr-75-NHU"/>
+                                <exclude reference="luG-23-fF9"/>
+                                <exclude reference="E7I-7n-Xs3"/>
+                                <exclude reference="cAQ-bD-Io9"/>
+                                <exclude reference="frC-hn-gao"/>
+                                <exclude reference="3hc-Gu-bCr"/>
+                                <exclude reference="IoD-Uv-Nbo"/>
+                                <exclude reference="Rse-9o-j71"/>
                                 <exclude reference="X55-6B-oM1"/>
                                 <exclude reference="b1G-cX-7tS"/>
+                                <exclude reference="ldj-vP-e5a"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -367,23 +400,9 @@
                                 <include reference="ptr-PU-zec"/>
                                 <include reference="WDh-bE-H89"/>
                                 <include reference="7sC-eI-QS7"/>
+                                <include reference="3yo-Zk-5oL"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="3aM-Sa-nVE"/>
-                                <include reference="i3v-Pk-a1o"/>
-                                <include reference="zht-xi-llW"/>
-                                <include reference="ldj-vP-e5a"/>
-                                <include reference="GGE-GI-0zu"/>
-                                <exclude reference="M5t-XG-Kmr"/>
-                                <include reference="Rc4-uz-d9x"/>
-                                <exclude reference="RpF-W9-gZ1"/>
-                                <include reference="T6S-7J-kyK"/>
-                                <include reference="XKq-7B-6os"/>
-                                <exclude reference="dCr-75-NHU"/>
-                                <exclude reference="luG-23-fF9"/>
-                                <include reference="3hc-Gu-bCr"/>
-                                <include reference="IoD-Uv-Nbo"/>
-                                <include reference="Rse-9o-j71"/>
                                 <include reference="9V3-8E-FfC"/>
                                 <include reference="PsK-HQ-OX4"/>
                                 <include reference="jVL-y5-VhF"/>
@@ -392,8 +411,26 @@
                                 <include reference="C7D-P3-nWx"/>
                                 <include reference="dmY-YT-Fni"/>
                                 <include reference="k4P-Xo-hxi"/>
+                                <include reference="i3v-Pk-a1o"/>
+                                <include reference="zht-xi-llW"/>
+                                <include reference="3aM-Sa-nVE"/>
+                                <include reference="GGE-GI-0zu"/>
+                                <exclude reference="M5t-XG-Kmr"/>
+                                <include reference="Rc4-uz-d9x"/>
+                                <exclude reference="RpF-W9-gZ1"/>
+                                <include reference="T6S-7J-kyK"/>
+                                <include reference="XKq-7B-6os"/>
+                                <exclude reference="dCr-75-NHU"/>
+                                <exclude reference="luG-23-fF9"/>
+                                <include reference="E7I-7n-Xs3"/>
+                                <include reference="cAQ-bD-Io9"/>
+                                <include reference="frC-hn-gao"/>
+                                <include reference="3hc-Gu-bCr"/>
+                                <include reference="IoD-Uv-Nbo"/>
+                                <include reference="Rse-9o-j71"/>
                                 <include reference="X55-6B-oM1"/>
                                 <include reference="b1G-cX-7tS"/>
+                                <include reference="ldj-vP-e5a"/>
                             </mask>
                         </variation>
                     </view>
@@ -401,6 +438,8 @@
                     <connections>
                         <outlet property="authorLabel" destination="7sC-eI-QS7" id="zT7-QJ-1ip"/>
                         <outlet property="bookStatus" destination="yPw-Xv-cKS" id="tD2-rE-RBc"/>
+                        <outlet property="checkOutButton" destination="ptr-PU-zec" id="xai-mc-bA7"/>
+                        <outlet property="returnBookButton" destination="3yo-Zk-5oL" id="ZnR-uU-qLo"/>
                         <outlet property="titleLabel" destination="WDh-bE-H89" id="FJg-jm-O2n"/>
                     </connections>
                 </viewController>
