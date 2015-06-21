@@ -224,10 +224,10 @@ class LibraryTableViewController: UITableViewController, UITableViewDataSource {
     return cell
   }
   
-  override func viewWillAppear(animated: Bool) {
-    super.viewWillAppear(animated)
-    self.tableView.reloadData()
-  }
+//  override func viewWillAppear(animated: Bool) {
+//    super.viewWillAppear(animated)
+//    self.tableView.reloadData()
+//  }
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     // Get the new view controller using [segue destinationViewController].
@@ -238,6 +238,5 @@ class LibraryTableViewController: UITableViewController, UITableViewDataSource {
     let selectedRow = indexPath!.row
     let selectedLibrary = self.libraries[selectedRow]
     sectionsController.selectedLibrary = selectedLibrary
-    println(selectedLibrary.name)
   }
 }

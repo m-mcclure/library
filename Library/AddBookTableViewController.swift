@@ -10,21 +10,28 @@ import UIKit
 
 class AddBookTableViewController: UITableViewController {
   
+  var newBook: Book!
+  
   @IBAction func cancelButtonPressed(sender: UIBarButtonItem) {
-    println("cancel pressed")
+    dismissViewControllerAnimated(true, completion: nil)
   }
   @IBAction func doneButtonPressed(sender: UIBarButtonItem) {
-    println("done pressed")
+    newBook.title = titleField!.text
+    newBook.author = authorField!.text
+    let textToInt = pagesField!.text.toInt()
+    newBook.numberOfPages = textToInt!
+    dismissViewControllerAnimated(true, completion: nil)
   }
+  
+  @IBOutlet weak var titleField: UITextField!
+  
+  @IBOutlet weak var authorField: UITextField!
+  
+  @IBOutlet weak var pagesField: UITextField!
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = false
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    println(newBook.title)
   }
   
   override func didReceiveMemoryWarning() {
@@ -45,16 +52,6 @@ class AddBookTableViewController: UITableViewController {
     // Return the number of rows in the section.
     return 3
   }
-  
-  /*
-  override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-  let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
-  
-  // Configure the cell...
-  
-  return cell
-  }
-  */
   
   /*
   // Override to support conditional editing of the table view.

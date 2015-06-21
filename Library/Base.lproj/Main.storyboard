@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1ia-vo-Psh">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -89,6 +90,7 @@
             <objects>
                 <tableViewController id="jbM-gE-SBa" customClass="BooksInSectionTableViewController" customModule="Library" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="vC1-IH-cKk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -130,6 +132,7 @@
                     <navigationItem key="navigationItem" id="ipd-vi-TTP">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="f6g-GC-xch">
                             <connections>
+                                <action selector="addBook:" destination="jbM-gE-SBa" id="rch-HJ-GWe"/>
                                 <segue destination="Wrd-7u-rFP" kind="presentation" identifier="AddBook" id="ldy-ps-Olr"/>
                             </connections>
                         </barButtonItem>
@@ -148,6 +151,7 @@
                         <viewControllerLayoutGuide type="bottom" id="jeo-kh-vjx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qCZ-9e-ihe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bookCover" translatesAutoresizingMaskIntoConstraints="NO" id="gvE-g4-wvN">
@@ -327,17 +331,10 @@
                                 <exclude reference="7sC-eI-QS7"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="9V3-8E-FfC"/>
-                                <exclude reference="PsK-HQ-OX4"/>
-                                <exclude reference="jVL-y5-VhF"/>
-                                <exclude reference="mtz-Bw-NgT"/>
-                                <exclude reference="5QD-gC-CiZ"/>
-                                <exclude reference="C7D-P3-nWx"/>
-                                <exclude reference="dmY-YT-Fni"/>
-                                <exclude reference="k4P-Xo-hxi"/>
+                                <exclude reference="3aM-Sa-nVE"/>
                                 <exclude reference="i3v-Pk-a1o"/>
                                 <exclude reference="zht-xi-llW"/>
-                                <exclude reference="3aM-Sa-nVE"/>
+                                <exclude reference="ldj-vP-e5a"/>
                                 <exclude reference="GGE-GI-0zu"/>
                                 <exclude reference="M5t-XG-Kmr"/>
                                 <exclude reference="Rc4-uz-d9x"/>
@@ -349,9 +346,16 @@
                                 <exclude reference="3hc-Gu-bCr"/>
                                 <exclude reference="IoD-Uv-Nbo"/>
                                 <exclude reference="Rse-9o-j71"/>
+                                <exclude reference="9V3-8E-FfC"/>
+                                <exclude reference="PsK-HQ-OX4"/>
+                                <exclude reference="jVL-y5-VhF"/>
+                                <exclude reference="mtz-Bw-NgT"/>
+                                <exclude reference="5QD-gC-CiZ"/>
+                                <exclude reference="C7D-P3-nWx"/>
+                                <exclude reference="dmY-YT-Fni"/>
+                                <exclude reference="k4P-Xo-hxi"/>
                                 <exclude reference="X55-6B-oM1"/>
                                 <exclude reference="b1G-cX-7tS"/>
-                                <exclude reference="ldj-vP-e5a"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -365,17 +369,10 @@
                                 <include reference="7sC-eI-QS7"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="9V3-8E-FfC"/>
-                                <include reference="PsK-HQ-OX4"/>
-                                <include reference="jVL-y5-VhF"/>
-                                <include reference="mtz-Bw-NgT"/>
-                                <include reference="5QD-gC-CiZ"/>
-                                <include reference="C7D-P3-nWx"/>
-                                <include reference="dmY-YT-Fni"/>
-                                <include reference="k4P-Xo-hxi"/>
+                                <include reference="3aM-Sa-nVE"/>
                                 <include reference="i3v-Pk-a1o"/>
                                 <include reference="zht-xi-llW"/>
-                                <include reference="3aM-Sa-nVE"/>
+                                <include reference="ldj-vP-e5a"/>
                                 <include reference="GGE-GI-0zu"/>
                                 <exclude reference="M5t-XG-Kmr"/>
                                 <include reference="Rc4-uz-d9x"/>
@@ -387,9 +384,16 @@
                                 <include reference="3hc-Gu-bCr"/>
                                 <include reference="IoD-Uv-Nbo"/>
                                 <include reference="Rse-9o-j71"/>
+                                <include reference="9V3-8E-FfC"/>
+                                <include reference="PsK-HQ-OX4"/>
+                                <include reference="jVL-y5-VhF"/>
+                                <include reference="mtz-Bw-NgT"/>
+                                <include reference="5QD-gC-CiZ"/>
+                                <include reference="C7D-P3-nWx"/>
+                                <include reference="dmY-YT-Fni"/>
+                                <include reference="k4P-Xo-hxi"/>
                                 <include reference="X55-6B-oM1"/>
                                 <include reference="b1G-cX-7tS"/>
-                                <include reference="ldj-vP-e5a"/>
                             </mask>
                         </variation>
                     </view>
@@ -409,6 +413,7 @@
             <objects>
                 <tableViewController id="u4P-lT-6Pt" customClass="AddBookTableViewController" customModule="Library" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="WIr-Sa-VW8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
@@ -590,7 +595,7 @@
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BcZ-H8-ndn">
                                                     <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     <variation key="heightClass=regular" fixedFrame="YES">
                                                         <rect key="frame" x="72" y="7" width="312" height="30"/>
                                                     </variation>
@@ -642,6 +647,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="authorField" destination="kea-AV-m1L" id="Qai-tx-qh2"/>
+                        <outlet property="pagesField" destination="BcZ-H8-ndn" id="rda-hL-CgI"/>
+                        <outlet property="titleField" destination="Zk2-gw-47z" id="0Kn-D0-Gla"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HdV-k3-ADq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

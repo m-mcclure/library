@@ -12,6 +12,10 @@ class BooksInSectionTableViewController: UITableViewController, UINavigationCont
   
   var selectedSection: Section!
   
+  @IBAction func addBook(sender: UIBarButtonItem) {
+    println("add pressed")
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     self.title = selectedSection.sectionName
@@ -63,10 +67,25 @@ class BooksInSectionTableViewController: UITableViewController, UINavigationCont
     super.viewWillAppear(animated)
     self.tableView.reloadData()
   }
+  
+  override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    return true
+  }
+  
+  override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+    if (editingStyle == UITableViewCellEditingStyle.Delete) {
+      selectedSection.booksInSection.removeAtIndex(indexPath.row)
+      tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+    }
+  }
 
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "AddBook" {
-      println("fuck all")
+      let nav = segue.destinationViewController as! UINavigationController
+      let addBookTableViewController = nav.topViewController as! AddBookTableViewController
+      let newBook = Book(title: "before", author: "", numberOfPages: 0)
+      selectedSection.booksInSection.append(newBook)
+      addBookTableViewController.newBook = newBook
       
     } else if segue.identifier == "ShowBookDetail" {
       let nav = segue.destinationViewController as! UINavigationController
@@ -77,60 +96,4 @@ class BooksInSectionTableViewController: UITableViewController, UINavigationCont
       booksDetailViewController.selectedBook = selectedBook
     }
   }
-  
-  /*
-  override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-  let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
-  
-  // Configure the cell...
-  
-  return cell
-  }
-  */
-  
-  /*
-  // Override to support conditional editing of the table view.
-  override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-  // Return NO if you do not want the specified item to be editable.
-  return true
-  }
-  */
-  
-  /*
-  // Override to support editing the table view.
-  override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-  if editingStyle == .Delete {
-  // Delete the row from the data source
-  tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-  } else if editingStyle == .Insert {
-  // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-  }
-  }
-  */
-  
-  /*
-  // Override to support rearranging the table view.
-  override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-  
-  }
-  */
-  
-  /*
-  // Override to support conditional rearranging of the table view.
-  override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-  // Return NO if you do not want the item to be re-orderable.
-  return true
-  }
-  */
-  
-  /*
-  // MARK: - Navigation
-  
-  // In a storyboard-based application, you will often want to do a little preparation before navigation
-  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-  // Get the new view controller using [segue destinationViewController].
-  // Pass the selected object to the new view controller.
-  }
-  */
-  
 }

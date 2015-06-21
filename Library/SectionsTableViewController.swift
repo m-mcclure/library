@@ -73,7 +73,7 @@ class SectionsTableViewController: UITableViewController, UINavigationController
     let talesFromTheFarSide = Book(title: "Tales from the Far Side", author: "Gary Larson", numberOfPages: 202)
     fiction.booksInSection.append(talesFromTheFarSide)
     
-    let deepThoughts = Book(title: "Deep Thoughts by Jack Handey", author: "Jack Handey", numberOfPages: 98)
+    let deepThoughts = Book(title: "Deep Thoughts", author: "Jack Handey", numberOfPages: 98)
     fiction.booksInSection.append(deepThoughts)
     
     //default books in each history section:
@@ -173,13 +173,6 @@ class SectionsTableViewController: UITableViewController, UINavigationController
     let hackers = Book(title: "Hacker's Delight", author: "Henry S. Warren, Jr.", numberOfPages: 495)
     hackers.isCheckedOut = true
     technology.booksInSection.append(hackers)
-
-
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = false
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem()
   }
   
   override func didReceiveMemoryWarning() {
@@ -230,8 +223,6 @@ class SectionsTableViewController: UITableViewController, UINavigationController
     let selectedRow = indexPath!.row
     let selectedSection = selectedLibrary.sections[selectedRow]
     booksInSectionTableViewController.selectedSection = selectedSection
-    
-    println(selectedSection.sectionName)
   }
   
 }
