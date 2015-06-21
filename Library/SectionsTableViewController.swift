@@ -15,6 +15,7 @@ class SectionsTableViewController: UITableViewController, UINavigationController
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
     self.title = "\(selectedLibrary.name)'s Collection"
     
     //create library sections and append to sections array
@@ -173,11 +174,7 @@ class SectionsTableViewController: UITableViewController, UINavigationController
     let hackers = Book(title: "Hacker's Delight", author: "Henry S. Warren, Jr.", numberOfPages: 495)
     hackers.isCheckedOut = true
     technology.booksInSection.append(hackers)
-  }
-  
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
+    selectedLibrary.listAllBooksInLibrary()
   }
   
   // MARK: - Table view data source
@@ -223,7 +220,8 @@ class SectionsTableViewController: UITableViewController, UINavigationController
     let selectedRow = indexPath!.row
     let selectedSection = selectedLibrary.sections[selectedRow]
     booksInSectionTableViewController.selectedSection = selectedSection
+    let sameSelectedLibrary = selectedLibrary
+    booksInSectionTableViewController.sameSelectedLibrary = sameSelectedLibrary
   }
-
   
 }

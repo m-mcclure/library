@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34BE33B31B3767EC001DF947 /* EditBookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BE33B21B3767EC001DF947 /* EditBookTableViewController.swift */; };
 		34C810D61B336C10006D3B97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C810D51B336C10006D3B97 /* AppDelegate.swift */; };
 		34C810DB1B336C10006D3B97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34C810D91B336C10006D3B97 /* Main.storyboard */; };
 		34C810DD1B336C10006D3B97 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34C810DC1B336C10006D3B97 /* Images.xcassets */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		34BE33B21B3767EC001DF947 /* EditBookTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditBookTableViewController.swift; sourceTree = "<group>"; };
 		34C810D01B336C10006D3B97 /* Library.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Library.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C810D41B336C10006D3B97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34C810D51B336C10006D3B97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				34E14CBA1B363C29009496D5 /* BooksInSectionTableViewController.swift */,
 				34E14CBC1B364935009496D5 /* AddBookTableViewController.swift */,
 				34E14CC01B36538F009496D5 /* BookDetailViewController.swift */,
+				34BE33B21B3767EC001DF947 /* EditBookTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				34E14CC11B36538F009496D5 /* BookDetailViewController.swift in Sources */,
 				34C810F91B336ECE006D3B97 /* Section.swift in Sources */,
 				34C810D61B336C10006D3B97 /* AppDelegate.swift in Sources */,
+				34BE33B31B3767EC001DF947 /* EditBookTableViewController.swift in Sources */,
 				34F5CB461B34C67600E45F2F /* Library.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

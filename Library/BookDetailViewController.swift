@@ -11,6 +11,7 @@ import UIKit
 class BookDetailViewController: UIViewController, UINavigationControllerDelegate  {
   
   var selectedBook: Book!
+  var bookForEdit: Book!
   
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var authorLabel: UILabel!
@@ -19,6 +20,7 @@ class BookDetailViewController: UIViewController, UINavigationControllerDelegate
   @IBOutlet weak var returnBookButton: UIButton!
   
   @IBAction func checkoutOrReturnButton(sender: UIButton) {
+    
     selectedBook.isCheckedOut = !selectedBook.isCheckedOut
     if selectedBook.isCheckedOut == false {
       bookStatus.text = "Book is available"
@@ -35,7 +37,7 @@ class BookDetailViewController: UIViewController, UINavigationControllerDelegate
     super.viewDidLoad()
     titleLabel.text  = selectedBook.title
     authorLabel.text = "by \(selectedBook.author)"
-    
+      
     if selectedBook.isCheckedOut == false {
       bookStatus.text = "Book is available"
       checkOutButton.hidden = false
@@ -49,16 +51,15 @@ class BookDetailViewController: UIViewController, UINavigationControllerDelegate
   
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
-    if selectedBook.isCheckedOut == false {
-      bookStatus.text = "Book is available"
-      checkOutButton.hidden = false
-      returnBookButton.hidden = true
-    } else {
-      bookStatus.text = "Book is checked out"
-      checkOutButton.hidden = true
-      returnBookButton.hidden = false
-    }
+    
   }
-
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    let nav = segue.destinationViewController as! UINavigationController
+    let editBookTableViewController = nav.topViewController as! EditBookTableViewController
+    bookForEdit = selectedBook
+    editBookTableViewController.bookForEdit = bookForEdit
+  }
+  
   
 }

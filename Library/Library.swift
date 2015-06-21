@@ -13,12 +13,19 @@ class Library {
   var address: String
   var hoursOfOperation: String
   var sections = [Section]()
+  func listAllBooksInLibrary() {
+    println("Complete list of books in the \(self.name) collection: ")
+    for section in sections {
+      for book in section.booksInSection {
+        println(book.title)
+      }
+    }
+  }
   
-  init(name: String, address: String, hoursOp: String/*, sections: Array<Section>*/){
+  init(name: String, address: String, hoursOp: String){
     self.name             = name
     self.address          = address
     self.hoursOfOperation = hoursOp
-    //self.sections         = sections
   }
 }
 

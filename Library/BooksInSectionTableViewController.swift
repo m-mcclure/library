@@ -11,25 +11,11 @@ import UIKit
 class BooksInSectionTableViewController: UITableViewController, UINavigationControllerDelegate, UITableViewDataSource {
   
   var selectedSection: Section!
-  
-  @IBAction func addBook(sender: UIBarButtonItem) {
-    println("add pressed")
-  }
+  var sameSelectedLibrary: Library!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     self.title = selectedSection.sectionName
-    
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = false
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-  }
-  
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
   }
   
   // MARK: - Table view data source
@@ -83,9 +69,11 @@ class BooksInSectionTableViewController: UITableViewController, UINavigationCont
     if segue.identifier == "AddBook" {
       let nav = segue.destinationViewController as! UINavigationController
       let addBookTableViewController = nav.topViewController as! AddBookTableViewController
-      let newBook = Book(title: "before", author: "", numberOfPages: 0)
+      let newBook = Book(title: "", author: "", numberOfPages: 0)
       selectedSection.booksInSection.append(newBook)
+      let passedSectionArrayOfBooks = selectedSection.booksInSection
       addBookTableViewController.newBook = newBook
+      addBookTableViewController.passedSectionArrayOfBooks = passedSectionArrayOfBooks
       
     } else if segue.identifier == "ShowBookDetail" {
       let nav = segue.destinationViewController as! UINavigationController
