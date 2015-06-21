@@ -21,7 +21,6 @@ class Library {
       }
     }
   }
-  
   init(name: String, address: String, hoursOp: String){
     self.name             = name
     self.address          = address
