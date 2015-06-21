@@ -1,4 +1,8 @@
-//: The submission page asked for a single URL, so I copied and pasted each of my separate class files into this playground for convenience. You can find the same classes within the XCode project provided in subsequent links.
+//The submission page asked for a single URL,
+//so I copied and pasted each of my separate class
+//files into this playground for convenience. You
+//can find the same classes within the XCode
+//project provided in subsequent links.
 
 import UIKit
 
