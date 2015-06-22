@@ -51,6 +51,11 @@ class BooksInSectionTableViewController: UITableViewController, UINavigationCont
   
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
+    //remove most recently added 'empty' book if user doesn't at least enter title and author data
+    let indexPath = selectedSection.booksInSection.count - 1
+    if (selectedSection.booksInSection[indexPath].title == "" || selectedSection.booksInSection[indexPath].author == "") {
+    selectedSection.booksInSection.removeAtIndex(indexPath)
+    }
     self.tableView.reloadData()
   }
   

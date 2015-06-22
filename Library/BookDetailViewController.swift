@@ -20,7 +20,6 @@ class BookDetailViewController: UIViewController, UINavigationControllerDelegate
   @IBOutlet weak var returnBookButton: UIButton!
   
   @IBAction func checkoutOrReturnButton(sender: UIButton) {
-    
     selectedBook.isCheckedOut = !selectedBook.isCheckedOut
     if selectedBook.isCheckedOut == false {
       bookStatus.text = "Book is available"
@@ -51,7 +50,6 @@ class BookDetailViewController: UIViewController, UINavigationControllerDelegate
   
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
-    
   }
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -60,6 +58,4 @@ class BookDetailViewController: UIViewController, UINavigationControllerDelegate
     bookForEdit = selectedBook
     editBookTableViewController.bookForEdit = bookForEdit
   }
-  
-  
 }

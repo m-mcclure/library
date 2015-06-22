@@ -14,11 +14,13 @@ class AddBookTableViewController: UITableViewController {
   var passedSectionArrayOfBooks: [Book]!
   
   @IBAction func cancelButtonPressed(sender: UIBarButtonItem) {
+    //passedSectionArrayOfBooks.removeAtIndex(indexPath)
     dismissViewControllerAnimated(true, completion: nil)
   }
   @IBAction func doneButtonPressed(sender: UIBarButtonItem) {
-    newBook.title = titleField!.text
-    newBook.author = authorField!.text
+    newBook.title         = titleField!.text
+    newBook.author        = authorField!.text
+    newBook.numberOfPages = pagesField.text.toInt()!
     passedSectionArrayOfBooks.append(newBook)
     dismissViewControllerAnimated(true, completion: nil)
   }
@@ -30,18 +32,12 @@ class AddBookTableViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     titleField.becomeFirstResponder()
-    println(passedSectionArrayOfBooks.count)
   }
   
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
   }
-  
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
-  
+
   // MARK: - Table view data source
   
   override func numberOfSectionsInTableView(tableView: UITableView) -> Int {

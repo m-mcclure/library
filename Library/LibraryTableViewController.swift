@@ -11,12 +11,9 @@ import UIKit
 class LibraryTableViewController: UITableViewController, UITableViewDataSource {
   
   var libraries = [Library]()
-  //var modifiedLibrary = Library.self
-  //var defaultSections = [Section]()
-  
+ 
   override func viewDidLoad() {
     super.viewDidLoad()
-    
     
     //create library branches and append to library array
     let ballard = Library(name: "Ballard", address: "322 Maple Street", hoursOp: "9:00-21:00")
@@ -45,7 +42,6 @@ class LibraryTableViewController: UITableViewController, UITableViewDataSource {
     
     let wallingford = Library(name: "Wallingford", address: "3440 Almeda St.", hoursOp: "9:00-21:00")
     libraries.append(wallingford)
-
   }
   
   
@@ -75,6 +71,7 @@ class LibraryTableViewController: UITableViewController, UITableViewDataSource {
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
     self.tableView.reloadData()
+    
   }
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

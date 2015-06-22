@@ -12,10 +12,7 @@ class EditBookTableViewController: UITableViewController, UITextFieldDelegate,UI
   var bookForEdit: Book!
   var passedSectionArrayOfBooks: [Book]!
   var bookToPassBack: Book!
-  
-  @IBOutlet weak var doneEditing: UIBarButtonItem!
-  
-  
+
   @IBOutlet weak var titleField: UITextField!
   @IBOutlet weak var authorField: UITextField!
   @IBOutlet weak var pagesField: UITextField!
@@ -56,11 +53,6 @@ class EditBookTableViewController: UITableViewController, UITextFieldDelegate,UI
     super.viewWillAppear(animated)
   }
   
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
-  
   // MARK: - Table view data source
   
   override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -74,11 +66,12 @@ class EditBookTableViewController: UITableViewController, UITextFieldDelegate,UI
     // Return the number of rows in the section.
     return 3
   }
-  
+  /*
   @IBAction func unwindToMainMenu(sender: UIStoryboardSegue)
   {
     let sourceViewController: AnyObject = sender.sourceViewController
     // Pull any data from the view controller which initiated the unwind segue.
     bookToPassBack = bookForEdit
   }
+*/
 }

@@ -19,25 +19,25 @@ class SectionsTableViewController: UITableViewController, UINavigationController
     self.title = "\(selectedLibrary.name)'s Collection"
     
     //create library sections and append to sections array
-    let art = Section(section: "Art")
+    let art        = Section(section: "Art")
     defaultSections.append(art)
     
-    let fiction = Section(section: "Fiction")
+    let fiction    = Section(section: "Fiction")
     defaultSections.append(fiction)
     
-    let history = Section(section: "History")
+    let history    = Section(section: "History")
     defaultSections.append(history)
     
-    let music = Section(section: "Music")
+    let music      = Section(section: "Music")
     defaultSections.append(music)
     
     let philosophy = Section(section: "Philosophy")
     defaultSections.append(philosophy)
     
-    let reference = Section(section: "Reference")
+    let reference  = Section(section: "Reference")
     defaultSections.append(reference)
     
-    let science = Section(section: "Science")
+    let science    = Section(section: "Science")
     defaultSections.append(science)
     
     let technology = Section(section: "Technology")
@@ -148,7 +148,7 @@ class SectionsTableViewController: UITableViewController, UINavigationController
     let friction = Book(title: "Friction: A Final Frontier", author: "David Larsfeld", numberOfPages: 333)
     science.booksInSection.append(friction)
     
-    let origin = Book(title: "On the Origin of Species", author: "Charles Dickens", numberOfPages: 338)
+    let origin = Book(title: "On the Origin of Species", author: "Charles Darwin", numberOfPages: 338)
     origin.isCheckedOut = true
     science.booksInSection.append(origin)
     
@@ -194,7 +194,6 @@ class SectionsTableViewController: UITableViewController, UINavigationController
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("sectionCell", forIndexPath: indexPath) as! UITableViewCell
-    
     let sectionToDisplay = self.selectedLibrary.sections[indexPath.row]
     let sectionInRow = selectedLibrary.sections[indexPath.row]
     
@@ -223,5 +222,4 @@ class SectionsTableViewController: UITableViewController, UINavigationController
     let sameSelectedLibrary = selectedLibrary
     booksInSectionTableViewController.sameSelectedLibrary = sameSelectedLibrary
   }
-  
 }
